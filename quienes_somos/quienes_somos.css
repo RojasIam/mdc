@@ -1,0 +1,50 @@
+
+/* AUXILIAR PARA VISTAS DE 1200 */
+@media (max-width: 1200px) {
+    main {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .grid-container {
+        padding-top: 0px;
+        display: grid; /* Cambiar a grid layout para mayor control */
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto; /* Definir tres filas */
+        gap: 10px;
+        text-align: center; /
+    }
+
+    .grid-container h2 {
+        order:1; /* Hace que el h2 aparezca primero */
+    }
+
+    .grid-container .typewriter-text {
+        grid-row: 2; /* La descripción ocupa la primera fila */
+        margin-left: 0; /* Ajusta el margen para móviles */
+    }
+
+    .grid-container .random-images-container {
+        flex-direction: column;
+        align-items: center;
+        height: 400px;
+        grid-row: 3;
+    }
+    
+    .random-images-container {
+        height: 200px; /* Ajusta la altura para dispositivos móviles si es necesario */
+    }
+    .random-images-container img {
+        width: 250px;
+        height: 75%;
+        object-fit: cover; /* Escala la imagen para cubrir el contenedor */
+        transition: opacity 0.5s ease; /* Transición para suavizar la aparición */
+        position: absolute; /* Posición absoluta para superponer las imágenes */
+        top: 0;
+        left: auto;
+        opacity: 0; /* Inicialmente establece la opacidad en 0 */
+       
+        
+    }
+    
+}

@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explorar</title>
+    <link rel="stylesheet" href="explorar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+</head>
+<body>
+    <header>
+        <div class="menu-btn" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
+        <nav id="menu" class="menu">
+            <ul>
+                <li><a href="../index.html"><i class="fas fa-home"></i> <span>Home</span></a></li>
+                <li><a href="#quienes-somos"><i class="fas fa-users"></i> <span>¿Quiénes somos?</span></a></li>
+                <li><a href="#galeria"><i class="fas fa-images"></i> <span>Galería de fotos</span></a></li>
+                <li><a href="#lista-canciones"><i class="fas fa-music"></i> <span>Lista de canciones 2024</span></a></li>
+                <li><a href="#videoclips"><i class="fas fa-video"></i> <span>Videoclips</span></a></li>
+                <link rel="preconnect" href="https://fonts.googleapis.com">
+                <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+                <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="quienes-somos" class="grid-container">
+            <h2>About us?</h2>
+            <div class="typewriter-text dancing-script">
+                <p id="typed-text"></p>
+            </div>
+            <div id="random-images" class="random-images-container">
+                <!-- Aquí se cargarán las imágenes aleatorias -->
+            </div>
+        </section>
+        
+        <section id="albunes">
+            <h2>Albums</h2>
+            <div class="album-container">
+                <div class="album">
+                    <img src="../ztools/imagenes/cada_siente.jpg" alt="Album 1">
+                    <span class="album-name">Cada Siete Tardes de Sol - 1996</span>
+                </div>
+                <div class="album">
+                    <img src="../ztools/imagenes/entre_arboles.jpg" alt="Album 2">
+                    <span class="album-name">Entre los Arboles - 2000</span>
+                </div>
+                <div class="album">
+                    <img src="../ztools/imagenes/ladob.jpg" alt="Album 3">
+                    <span class="album-name">Lado B - 2015</span>
+                </div>
+                <div class="album">
+                    <img src="../ztools/imagenes/si_algoasi.jpg" alt="Album 4">
+                    <span class="album-name">Si Algo asi Como el Amor - 2006</span>
+                </div>
+                <div class="album">
+                    <img src="../ztools/imagenes/suna.jpg" alt="Album 5">
+                    <span class="album-name">SUNA - 2009</span>
+                </div>
+                <div class="album">
+                    <img src="../ztools/imagenes/trece_baladas.jpg" alt="Album 6">
+                    <span class="album-name">Las trece Baladas - 2024</span>
+                </div>
+                
+            </div>
+        </section>
+        
+        </section>
+
+        <section id="lista-canciones">
+            <h1 class="section-title">Our songs</h1>
+            <div class="music-columns">
+                <div class="music-column">
+                    <h2>Cada Siete Tardes de Sol 🎶</h2>
+                    <div class="music-player">
+                        <div class="player-controls">
+                            <button class="play-pause" onclick="togglePlayPause(1)">▶️</button>
+                            <span class="song-info">Mujer Noche</span>
+                            <audio id="myAudio1" preload="auto" >
+                                <source src="../ztools/audios/mujer_noche.mp3" type="audio/mpeg">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                        <div class="player-controls">
+                            <button class="play-pause" onclick="togglePlayPause(2)">▶️</button>
+                            <span class="song-info">Entre los árboles</span>
+                            <audio id="myAudio2" preload="auto" >
+                                <source src="../ztools/audios/entre_arboles.mp3" type="audio/mpeg">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                        <div class="player-controls">
+                            <button class="play-pause" onclick="togglePlayPause(3)">▶️</button>
+                            <span class="song-info">Suna</span>
+                            <audio id="myAudio3" preload="auto" >
+                                <source src="../ztools/audios/suna.mp3" type="audio/mpeg">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                        <div class="player-controls">
+                            <button class="play-pause" onclick="togglePlayPause(4)">▶️</button>
+                            <span class="song-info">Si algo así</span>
+                            <audio id="myAudio4" preload="auto" >
+                                <source src="../ztools/audios/algo_asi.mp3" type="audio/mpeg">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                        <div class="player-controls">
+                            <button class="play-pause" onclick="togglePlayPause(5)">▶️</button>
+                            <span class="song-info">LB</span>
+                            <audio id="myAudio5" preload="auto" >
+                                <source src="../ztools/audios/lb.mp3" type="audio/mpeg">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                        <div class="player-controls">
+                            <button class="play-pause" onclick="togglePlayPause(6)">▶️</button>
+                            <span class="song-info">Un día sin sexo</span>
+                            <audio id="myAudio6" preload="auto" >
+                                <source src="../ztools/audios/sexo_dia.mp3" type="audio/mpeg">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                        <!-- Añadir más canciones aquí -->
+                    </div>
+                </div>
+        
+                <div class="music-column">
+                    <h2>Entre los Arboles 🎶</h2>
+                    <div class="music-player">
+                        <div class="player-controls">
+                            <button class="play-pause" onclick="togglePlayPause()">▶️</button>
+                            <span class="song-info">Aire</span>
+                        </div>
+                        <div class="player-controls">
+                            <button class="play-pause" onclick="togglePlayPause()">▶️</button>
+                            <span class="song-info">Extraño amor</span>
+                        </div>
+                        <div class="player-controls">
+                            <button class="play-pause" onclick="togglePlayPause()">▶️</button>
+                            <span class="song-info">Tras esa puerta</span>
+                        </div>
+                        <div class="player-controls">
+                            <button class="play-pause" onclick="togglePlayPause()">▶️</button>
+                            <span class="song-info">Burbujas de amor</span>
+                        </div>
+                        <div class="player-controls">
+                            <button class="play-pause" onclick="togglePlayPause()">▶️</button>
+                            <span class="song-info">Frágil</span>
+                        </div>
+                        <div class="player-controls">
+                            <button class="play-pause" onclick="togglePlayPause()">▶️</button>
+                            <span class="song-info">Día de domingo</span>
+                        </div>
+                        <!-- Añadir más canciones aquí -->
+                    </div>
+                </div>
+        
+                <div class="music-column">
+                    <h2>Lado B 🎶</h2>
+                    <div class="music-player">
+                        <div class="player-controls">
+                            <button class="play-pause" onclick="togglePlayPause()">▶️</button>
+                            <span class="song-info">Desenchufado</span>
+                        </div>
+                        <div class="player-controls">
+                            <button class="play-pause" onclick="togglePlayPause()">▶️</button>
+                            <span class="song-info">Sálvame</span>
+                        </div>
+                        <div class="player-controls">
+                            <button class="play-pause" onclick="togglePlayPause()">▶️</button>
+                            <span class="song-info">Devuélveme</span>
+                        </div>
+                        <div class="player-controls">
+                            <button class="play-pause" onclick="togglePlayPause()">▶️</button>
+                            <span class="song-info">Anémona</span>
+                        </div>
+                        <div class="player-controls">
+                            <button class="play-pause" onclick="togglePlayPause()">▶️</button>
+                            <span class="song-info">Perdido</span>
+                        </div>
+                        <div class="player-controls">
+                            <button class="play-pause" onclick="togglePlayPause()">▶️</button>
+                            <span class="song-info">De tierra</span>
+                        </div>
+                        <!-- Añadir más canciones aquí -->
+                    </div>
+                </div>
+        
+                <div class="music-column">
+                    <h2>Si Algo asi Como el Amor 🎶</h2>
+                    <div class="music-player">
+                        <div class="player-controls">
+                            <button class="play-pause" onclick="togglePlayPause()">▶️</button>
+                            <span class="song-info">Besos y caricias</span>
+                        </div>
+                        <div class="player-controls">
+                            <button class="play-pause" onclick="togglePlayPause()">▶️</button>
+                            <span class="song-info">Cuarto menguante</span>
+                        </div>
+                        <div class="player-controls">
+                            <button class="play-pause" onclick="togglePlayPause()">▶️</button>
+                            <span class="song-info">Háblame</span>
+                        </div>
+                        <div class="player-controls">
+                            <button class="play-pause" onclick="togglePlayPause()">▶️</button>
+                            <span class="song-info">Espada y la pared</span>
+                        </div>
+                        <div class="player-controls">
+                            <button class="play-pause" onclick="togglePlayPause()">▶️</button>
+                            <span class="song-info">Bala perdida</span>
+                        </div>
+                        <div class="player-controls">
+                            <button class="play-pause" onclick="togglePlayPause()">▶️</button>
+                            <span class="song-info">Fugitivo</span>
+                        </div>
+                        <!-- Añadir más canciones aquí -->
+                    </div>
+                </div>
+        
+                <div class="music-column">
+                    <h2>SUNA 🎶</h2>
+                    <div class="music-player">
+                        <div class="player-controls">
+                            <button class="play-pause" onclick="togglePlayPause()">▶️</button>
+                            <span class="song-info">Tanta distancia</span>
+                        </div>
+                        <div class="player-controls">
+                            <button class="play-pause" onclick="togglePlayPause()">▶️</button>
+                            <span class="song-info">No me imagino</span>
+                        </div>
+                        <div class="player-controls">
+                            <button class="play-pause" onclick="togglePlayPause()">▶️</button>
+                            <span class="song-info">Promesas</span>
+                        </div>
+                        <div class="player-controls">
+                            <button class="play-pause" onclick="togglePlayPause()">▶️</button>
+                            <span class="song-info">Canción de amor</span>
+                        </div>
+                        <div class="player-controls">
+                            <button class="play-pause" onclick="togglePlayPause()">▶️</button>
+                            <span class="song-info">Llévame</span>
+                        </div>
+                        <div class="player-controls">
+                            <button class="play-pause" onclick="togglePlayPause()">▶️</button>
+                            <span class="song-info">Esperando</span>
+                        </div>
+                        <!-- Añadir más canciones aquí -->
+                    </div>
+                </div>
+        
+                <div class="music-column">
+                    <h2>Las trece Baladas 🎶</h2>
+                    <div class="music-player">
+                        <div class="player-controls">
+                            <button class="play-pause" onclick="togglePlayPause()">▶️</button>
+                            <span class="song-info">Enloqueciendo</span>
+                        </div>
+                        <div class="player-controls">
+                            <button class="play-pause" onclick="togglePlayPause()">▶️</button>
+                            <span class="song-info">Siempre amigos</span>
+                        </div>
+                        <div class="player-controls">
+                            <button class="play-pause" onclick="togglePlayPause()">▶️</button>
+                            <span class="song-info">Dama de la noche</span>
+                        </div>
+                        <div class="player-controls">
+                            <button class="play-pause" onclick="togglePlayPause()">▶️</button>
+                            <span class="song-info">El sueño</span>
+                        </div>
+                        <div class="player-controls">
+                            <button class="play-pause" onclick="togglePlayPause()">▶️</button>
+                            <span class="song-info">Ángeles de piedra</span>
+                        </div>
+                        <div class="player-controls">
+                            <button class="play-pause" onclick="togglePlayPause()">▶️</button>
+                            <span class="song-info">Trasatlántico</span>
+                        </div>
+                        <!-- Añadir más canciones aquí -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+       <section id="videoclips">
+            <h2>Video Clips</h2>
+            <div class="videoclips-container">
+                <div class="portfolio-image">
+                    <p>Cuatro con Vanessa Saba</p>
+                    <iframe width="450" height="285" src="https://www.youtube.com/embed/Ic7uzikVRxo?si=kXvLzKWHbGs3zrGn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <!--<img src="./img/img_portfolio4.webp" alt="portfolio-fourth">-->
+                </div>
+                <div class="portfolio-image">
+                    <p>La Maquina del Tiempo</p>
+                    <iframe width="450" height="285" src="https://www.youtube.com/embed/TPjYxHYNF_I?si=IPV5zUrTjc0y3zA2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <!--<img src="./img/img_portfolio4.webp" alt="portfolio-fourth">-->
+                </div>
+                <div class="portfolio-image">
+                    <p>Entre los Arboles</p>
+                    <iframe width="450" height="285" src="https://www.youtube.com/embed/zMHHeoD8YWk?si=1A45WkQTUrbX-l8f" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <!--<img src="./img/img_portfolio4.webp" alt="portfolio-fourth">-->
+                </div>
+                <div class="portfolio-image">
+                    <p>Suna</p>
+                    <iframe width="450" height="285" src="https://www.youtube.com/embed/VUM8pzErYCg?si=M14-ZfFyLjayKhMe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <!--<img src="./img/img_portfolio4.webp" alt="portfolio-fourth">-->
+                </div>
+                
+            </div>
+            
+        </section>
+        
+    </main>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://instagram.com" target="_blank" class="rrss"><img src="../ztools/logos/instagram.png" alt="Instagram"></a>
+            <a href="https://facebook.com" target="_blank" class="rrss"><img src="../ztools/logos/facebook.png" alt="Facebook"></a>
+            <a href="https://wa.me/1234567890" target="_blank" class="rrss"><img src="../ztools/logos/social.png" alt="WhatsApp"></a>
+            <a href="https://youtube.com" target="_blank" class="rrss"><img src="../ztools/logos/youtube.png" alt="YouTube"></a>
+            <a href="https://spotify.com" target="_blank" class="rrss"><img src="../ztools/logos/spotify.png" alt="Spotify"></a>
+            <a href="https://spotify.com" target="_blank" class="rrss"><img src="../ztools/logos/itunes.png" alt="itunes"></a>
+        </div>
+    </footer>
+
+    <footer class="developer-footer">
+        <p>Developer and Design by Andres Rojas 2024</p>
+    </footer>
+    <script src="../quienes_somos/somos.js"></script>
+    <script src="explorar.js"></script>
+</body>
+</html>

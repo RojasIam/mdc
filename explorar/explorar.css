@@ -1,0 +1,472 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    /* background-color: #011013; */
+    background: linear-gradient(#011013, #032b33, #010405, #001a1f);
+    color: #fff;
+    overflow-x: hidden;
+}
+
+header {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    background-color: transparent;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-btn {
+    cursor: pointer;
+    font-size: 2em;
+    color: #fff;
+}
+
+.menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 24px;
+}
+
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li {
+    margin: 20px 0;
+    position: relative;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu li a span {
+    display: none;
+}
+
+.menu li a i {
+    font-size: 1em;
+}
+
+.menu li:hover a span {
+    display: inline;
+    position: absolute;
+    left: 40px;
+    white-space: nowrap;
+    background-color: #333;
+    padding: 5px 10px;
+    border-radius: 5px;
+    z-index: 1;
+}
+
+main {
+    padding-left: 150px;
+    padding-right: 150px;
+    padding-top: 20px;
+}
+
+section {
+    padding: 20px;
+    margin: 20px;
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 10px;
+    /* box-shadow: 0 0 15px #770202; */
+}
+
+footer {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    background-color: transparent;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.developer-footer {
+    text-align: center;
+    padding: 10px 0;
+    /* background-color: #333; */
+    color: #fff;
+    position: relative;
+    z-index: 1;
+}
+
+.developer-footer p {
+    margin: 0;
+    font-size: 1em;
+}
+
+.social-links a {
+    text-decoration: none;
+    margin: 10px 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-links a img {
+    width: 30px;
+    height: auto;
+}
+
+.social-links a:hover {
+    color: #fff;
+}
+
+/* INICIO QUIENES SOMOS */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: start;
+    padding: 15px 20px;
+    text-align: center;
+}
+
+.grid-container h2 {
+    color: #770202;
+    margin-top: 0px;
+    padding: 0px;
+    font-size: 60px;
+}
+
+h2 {
+    grid-column: span 2;
+    margin-bottom: 10px;
+}
+
+.typewriter-text {
+    
+    white-space: pre-wrap; /* Para permitir que el texto se ajuste a varias líneas */
+    overflow: hidden;
+    /* border-right: .15em solid orange; */
+    letter-spacing: .15em;
+    margin-left: 25px;
+}
+
+.random-images-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px; /* Ajusta la altura deseada */
+    overflow: hidden; /* Oculta el desbordamiento para evitar recortes visibles */
+    position: relative; /* Añade posición relativa para los elementos hijos */
+    opacity: 0.7; 
+}
+.random-images-container img {
+    border-radius: 180px;
+    width: auto;
+    height: 98%;
+    object-fit: cover; /* Escala la imagen para cubrir el contenedor */
+    transition: opacity 0.5s ease; /* Transición para suavizar la aparición */
+    position: absolute; /* Posición absoluta para superponer las imágenes */
+    top: 0;
+    left: 0;
+    margin-left: 100px;
+     box-shadow: 0 0 5px rgb(3, 3, 3);
+    opacity: 0.5; /* Establece la opacidad en 0.5 */
+    animation: rotate-clockwise 5s linear infinite; /* Animación de rotación */
+}
+
+@keyframes rotate-clockwise {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+.random-images-container img.visible {
+    opacity: 1; /* Cuando la clase visible se aplica, la imagen se vuelve visible */
+}
+
+.dancing-script {
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-size: 20px;
+}
+
+img.visible {
+    opacity: 1;
+}
+
+/* QUIENES SOMOS END */
+/* ALBUNES START */
+/* Sección de álbumes */
+
+#albunes {
+    padding: 15px;
+    margin: 15px;
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 10px;
+}
+
+#albunes h2 {
+    text-align: center;
+    color: #770202;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.album-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas */
+    gap: 25px; /* Espacio entre columnas */
+}
+
+.album {
+    display: flex;
+    align-items: center; /* Alineación vertical al centro */
+    text-align: left;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 10px;
+    /* box-shadow: 0 0 5px rgb(9, 197, 197); */
+    animation: pulse 1s infinite alternate ease-in-out; /* Animación de latido */
+}
+
+.album img {
+    width: 100px;
+    height: auto;
+    border-radius: 10px;
+    margin-right: 20px; /* Espacio entre la imagen y el texto */
+}
+
+.album-name {
+    color: #fff;
+    font-size: 1.2em;
+}
+
+/* Animación de latido */
+@keyframes pulse {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.05);
+    }
+}
+
+/* Media Query para dispositivos móviles */
+@media (max-width: 768px) {
+    .album-container {
+        grid-template-columns: 1fr; /* Una columna en dispositivos móviles */
+        margin-top: 0px;
+        padding-top: 0px;
+    }
+
+    .album {
+        flex-direction: column; /* Ajusta la disposición para dispositivos móviles */
+        align-items: center;
+        
+    }
+
+    .album img {
+        margin: 0 0 10px 0; /* Centra la imagen en dispositivos móviles */
+        
+    }
+
+    .album-name {
+        margin: 0; /* Ajusta el margen para dispositivos móviles */
+        margin-top: 0px;
+        padding-top: 0px;
+    }
+}
+
+/* ALBUNES  END */
+/* LISTA DE CANCIONES START */
+#lista-canciones {
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.section-title {
+    font-size: 2.5em;
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #770202;
+}
+
+.music-columns {
+    display: grid;
+    grid-template-columns: 1fr; /* Una columna en dispositivos móviles */
+    gap: 15px; /* Espacio entre columnas */
+}
+
+.music-column {
+    
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.music-column h2 {
+    text-align: center;
+    color: #ffffff;
+    font-size:15px;
+    margin-bottom: 10px;
+}
+
+.music-player {
+    margin-top: 10px;
+    
+    /* Estilo para el reproductor de música */
+}
+
+.player-controls {
+    display: flex;
+    
+    align-items: center;
+    border-radius: 20px;
+    background-color: rgba(8, 8, 8, 0.2);
+    box-shadow: 0 0 3px rgb(9, 197, 197);
+    margin: 10px;
+    padding: 15px;
+}
+
+.player-controls button {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.2em;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.song-info {
+    color: #fff;
+    font-size: 1em;
+}
+
+/* Media Query para dispositivos móviles */
+@media (min-width: 768px) {
+    .music-columns {
+        grid-template-columns: repeat(3, 1fr); /* Tres columnas en dispositivos de escritorio */
+    }
+}
+
+/* LISTA DE CANCIONES END */
+/* VIDEOCLIPS START */
+#videoclips h2{
+    color: #770202;
+    text-align: center;
+    font-size: 2em;
+
+}
+
+.videoclips-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+    gap: 25px; /* Espacio entre columnas */
+}
+
+.portfolio-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Alineación vertical al centro */
+    text-align: center;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    padding: 10px;
+    border-radius: 10px;
+    /* box-shadow: 0 0 5px rgb(9, 197, 197); */
+}
+
+@media (max-width: 768px) {
+    .videoclips-container{
+        grid-template-columns: 1fr; /* Tres columnas en dispositivos de escritorio */
+        align-items: auto;
+    }
+
+    iframe{
+        width:250px ;
+        height: 175px;
+        text-align: center;
+        align-items: center;
+    }
+    .portfolio-image {
+       
+         background-color: rgba(155, 150, 150, 0.5); 
+       
+    }
+}
+/* VIDEOCLIPS END */
+
+/* Media Query para dispositivos móviles */
+@media (max-width: 768px) {
+    main {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .grid-container {
+        padding-top: 0px;
+        display: grid; /* Cambiar a grid layout para mayor control */
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto; /* Definir tres filas */
+        gap: 10px;
+        text-align: center; /
+    }
+
+    .grid-container h2 {
+        order:1; /* Hace que el h2 aparezca primero */
+    }
+
+    .grid-container .typewriter-text {
+        grid-row: 2; /* La descripción ocupa la primera fila */
+        margin-left: 0; /* Ajusta el margen para móviles */
+    }
+
+    .grid-container .random-images-container {
+        flex-direction: column;
+        align-items: center;
+        height: 260px;
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+        grid-row: 3;
+    }
+    
+    
+    .random-images-container img {
+        width: 250px;
+        height: 260px;
+        object-fit: cover; /* Escala la imagen para cubrir el contenedor */
+        transition: opacity 0.5s ease; /* Transición para suavizar la aparición */
+        position: absolute; /* Posición absoluta para superponer las imágenes */
+        top: 0;
+        left: auto;
+        opacity: 0; /* Inicialmente establece la opacidad en 0 */
+        margin: 0 auto; /* Centra la imagen horizontalmente */
+    }
+    
+}
+
+
+@media (min-width: 768px) {
+    .menu {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .menu-btn {
+        display: none;
+    }
+}

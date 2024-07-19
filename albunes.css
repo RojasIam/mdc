@@ -1,0 +1,11 @@
+.albunes-mdc {
+    position: absolute;
+    bottom: 22%; /* Ajusta la posición vertical según sea necesario */
+    left: 18%; /* Centra horizontalmente */
+    transform: translateX(-50%); /* Centra horizontalmente */
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgb(9, 197, 197);
+    animation: pulse 1s infinite alternate ease-in-out; /* Animación de latido */
+}
